@@ -7,13 +7,13 @@ function tana() {
 
     let tulemus = document.getElementById("tulemus");
 
-    tulemus.innerHTML = "<b>kuupأ¤ev:</b> " + kuupaev + "<br>" +
+    tulemus.innerHTML = "<b>kuupäev:</b> " + kuupaev + "<br>" +
         "<b>kellaaeg:</b> " + kellaaeg + "<br>" +
-        "<b>Kuupأ¤ev ja kellaaeg:</b> " + koos;
+        "<b>Kuupäev ja kellaaeg:</b> " + koos;
 
-    console.log("Kuupأ¤ev: " + kuupaev);
+    console.log("Kuupäev: " + kuupaev);
     console.log("Kellaaeg: " + kellaaeg);
-    console.log("Kuupأ¤ev ja kellaaeg: " + koos);
+    console.log("Kuupäev ja kellaaeg: " + koos);
 }
 
 function sunnipaev() {

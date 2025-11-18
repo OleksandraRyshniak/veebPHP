@@ -64,3 +64,11 @@ div.flex-container > div{
 img{
     width: 200px;
 }
+
+#but1, #button_1 {
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: white;
+}

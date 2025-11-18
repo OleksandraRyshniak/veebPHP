@@ -31,7 +31,7 @@ include("nav.php");
     <div>
         <img src="image/tthk_logo.png" alt="pilt vabal valikul">
             <h2>Kuupäev ja aja</h2>
-            <input type="button" value="Täna on"  onclick="tana()">
+            <input type="button"  id="button_1" value="Täna on"  onclick="tana()">
             <br>
             <input type="button" id="but1" value="Minu sünnipäev on" onclick="sunnipaev()">
             <div id="tulemus"></div>
