@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/muusikaStyle.css">
     <link rel="stylesheet" href="style/objekt.css">
+    <link rel="stylesheet" href="style/ajaFunktsStyle.css">
     <script src="js/jsMuusika.js"></script>
     <script src="js/jsNupp.js"></script>
 </head>
