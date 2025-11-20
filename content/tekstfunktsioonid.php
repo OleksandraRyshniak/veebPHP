@@ -1,4 +1,12 @@
 <?php
+function clearVarsExcept($url, $varname){
+    $url =basename($url);
+    if(str_starts_with($url, "?")){
+        return "?$varname=".$_REQUEST[$varname];
+    }
+    return strtok($url, '?')."?$varname=".$_REQUEST[$varname];
+}
+
 echo "<h2>Tekst funktsioonid</h2>";
 $tekst='PHP on skriptikeel serveripoolne';
 echo $tekst;
@@ -69,7 +77,7 @@ $sym= array ('ll');
 $sum = array('rt');
 echo "<li>".str_replace($sym, $sum, $linn)."</li></ol>";
 ?>
-<form name="tekstkontroll" action="tekstfunktsioonid.php" method="post">
+<form name="tekstkontroll" action="<?=clearVarsExcept($_SERVER['REQUEST_URI'], "link")?>" method="post">
     <label for="linn">Sisesta linnanimi: </label>
     <input type="text" id="linn" name="linn">
     <input type="submit" value="Kontrolli">
