@@ -61,13 +61,29 @@ $linn = "Tallinn";
 echo "<ol><li>"."Linna esimene täht on ".substr($linn, 0, 1). ".";
 echo "<li>"."Selle linna nimi koosneb ".strlen($linn). " tähest.";
 echo "<li>"."Linna viimane täht on ".substr($linn, 6, 1). ".";
-$lin = "Vanalinn asub Tallinnas";
-$linnaga = array( 'Tallinnas');
-$linna = array('*********');
+$lin = "Vanalinn asub Tallinn";
+$linnaga = array( 'Tallinn');
+$linna = array('*******');
 echo "<li>".str_replace($linnaga, $linna, $lin);
 $sym= array ('ll');
 $sum = array('rt');
-echo "<li>".str_replace($sym, $sum, $linn)."</li>";
+echo "<li>".str_replace($sym, $sum, $linn)."</li></ol>";
+?>
+<form name="tekstkontroll" action="tekstfunktsioonid.php" method="post">
+    <label for="linn">Sisesta linnanimi: </label>
+    <input type="text" id="linn" name="linn">
+    <input type="submit" value="Kontrolli">
+</form>
+<?php
+if(isset($_REQUEST['linn'])){
+    if(ucwords($_REQUEST['linn'])=='Tallinn'){
+        echo ucwords($_REQUEST['linn'])." on õige!";
+    }
+    else{
+        echo ucwords($_REQUEST['linn'])." on vale!";
+    }
+}
+?>
 
 
 
