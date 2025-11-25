@@ -79,10 +79,10 @@ echo "</ol>";
 ?>
 <form name="matem_funktsioonid" action="<?=clearVarsExcept($_SERVER['REQUEST_URI'], "link")?>" method="post">
     <label for="arv3">Sisesta esimene arv: </label>
-    <input type="number" id="arv3" name="arv3">
+    <input type="number" id="arv3" name="arv3" min="1" max="20">
     <br><br>
     <label for="arv4">Sisesta teine arv: </label>
-    <input type="number" id="arv4" name="arv4">
+    <input type="number" id="arv4" name="arv4" min="1" max="20">
     <input type="submit" value="Kontrolli">
 </form>
 <?php
