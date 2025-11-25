@@ -1,4 +1,11 @@
 <?php
+function clearVarsExcept($url, $varname){
+    $url =basename($url);
+    if(str_starts_with($url, "?")){
+        return "?$varname=".$_REQUEST[$varname];
+    }
+    return strtok($url, '?')."?$varname=".$_REQUEST[$varname];
+}
 echo "<h2>Matemaatilise tehted</h2>";
 $arv1 = 1.231;
 $arv2 = 2.285;
@@ -60,5 +67,44 @@ $format ='Tere, %s %s; arv x: %d';
 printf($format,$nimi, $perenimi, $x );
 echo "<br>";
 
-
+echo "<h3>Arv mõistatus, arva ära 2 arvu(1-20)</h2>";
+$arv3 = 8;
+$arv4 = 3;
+echo "<ol><li>"."Kui need kaka arvu korrutada, saame: ".($arv3*$arv4)."</li>";
+echo "<li>"."Kui tõsta esimene arv juure alla, siis saadakse: ".sqrt($arv3)."</li>";
+echo "<li>"."Kui tõsta teine arv juure alla, siis saadakse: ".sqrt($arv4)."</li>";
+echo "<li>"."Kui need kaks arvu kokku liita ja üks lahutada, saadakse: ".($arv3+$arv4-1)."</li>";
+echo "<li>"."Kui lahutada teine arv esimesest ja korrutada kahega, saadakse:".(($arv3-$arv4)*2)."</li>";
+echo "</ol>";
+?>
+<form name="matem_funktsioonid" action="<?=clearVarsExcept($_SERVER['REQUEST_URI'], "link")?>" method="post">
+    <label for="arv3">Sisesta esimene arv: </label>
+    <input type="number" id="arv3" name="arv3">
+    <br><br>
+    <label for="arv4">Sisesta teine arv: </label>
+    <input type="number" id="arv4" name="arv4">
+    <input type="submit" value="Kontrolli">
+</form>
+<?php
+if(isset($_REQUEST['arv3']) && isset($_REQUEST['arv4'])){
+    if($_REQUEST['arv3']== $arv3 && $_REQUEST['arv4']== $arv4){
+        echo "Esimene arv: ".$_REQUEST['arv3']." on õige!";
+        echo "<br>";
+        echo "Teine arv: ".$_REQUEST['arv4']." on õige!";
+    }else if($_REQUEST['arv3']== $arv3 && $_REQUEST['arv4']!== $arv4){
+        echo "Esimene arv: ".$_REQUEST['arv3']." on õige!";
+        echo "<br>";
+        echo "Teine arv: ".$_REQUEST['arv4']." on vale!";
+    }else if($_REQUEST['arv3']!== $arv3 && $_REQUEST['arv4']== $arv4){
+        echo "Esimene arv: ".$_REQUEST['arv3']." on vale!";
+        echo "<br>";
+        echo "Teine arv: ".$_REQUEST['arv4']." on õige!";
+    }
+    else{
+        echo "Esimene arv: ".$_REQUEST['arv3']." on vale!";
+        echo "<br>";
+        echo "Teine arv: ".$_REQUEST['arv4']." on vale!";
+    }
+}
+?>
 
