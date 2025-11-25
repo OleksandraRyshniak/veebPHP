@@ -6,6 +6,8 @@ function clearVarsExcept($url, $varname){
     }
     return strtok($url, '?')."?$varname=".$_REQUEST[$varname];
 }
+echo "<div class = 'flex-container'>";
+echo "<div>";
 echo "<h2>Matemaatilise tehted</h2>";
 $arv1 = 1.231;
 $arv2 = 2.285;
@@ -19,6 +21,8 @@ echo "<br>";
 echo "'/'  Jagatise tulemus: ".($arv1/$arv2);
 echo "<br>";
 echo "<br>";
+echo "</div>";
+echo "<div>";
 echo "<h2>Matemaatilised funktsioonid</h2>";
 echo "'min()'  Väiksem arv: ".min($arv1, $arv2);
 echo "<br>";
@@ -40,6 +44,8 @@ echo "'sqrt(arv)'  Ruutjuurt: ".sqrt($arv2);
 echo "<br>";
 echo "'pi()'  Pi: ".pi();
 echo "<br>";
+echo "</div>";
+echo "<div>";
 echo "<h2>Omistamise operaatorid</h2>";
 $x = 10;
 $y = 20;
@@ -66,7 +72,8 @@ echo "<br>";
 $format ='Tere, %s %s; arv x: %d';
 printf($format,$nimi, $perenimi, $x );
 echo "<br>";
-
+echo "</div>";
+echo "<div>";
 echo "<h3>Arv mõistatus, arva ära 2 arvu(1-20)</h2>";
 $arv3 = 8;
 $arv4 = 3;
@@ -106,5 +113,7 @@ if(isset($_REQUEST['arv3']) && isset($_REQUEST['arv4'])){
         echo "Teine arv: ".$_REQUEST['arv4']." on vale!";
     }
 }
+echo "</div>";
+echo "</div>";
 ?>
 
