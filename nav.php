@@ -12,6 +12,11 @@
             </ul>
         </li>
         <li><a href="?link=too_pildifailidega.php">Töö pildifailidega</a></li>
+        <li><a href="?link=konspekt_mob.php">Mobillimalli</a>
+            <ul class = "dropdown">
+                <li><a href="content/mobiilimall/Anekdoot/esimene.php">Anekdoot</a></li>
+                <li><a href="content/mobiilimall/esmaspaev.php">Tunniplaan</a></li>
+            </ul></li>
         <li>
             <a href="https://oleksandraryshniak24.thkit.ee/" target="_blank">
                 vana index</a>

@@ -6,18 +6,15 @@
 maximum-scale=1.0;">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Tunniplaan</title>
-    <link href="style_mob/kujundus.css" rel="stylesheet" type="text/css" />
+    <link href="anekdoot_style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="header">
     <div class="nav">
         <ul>
-            <li><a href="esmaspaev.php">E</a></li>
-            <li><a href="teisipaev.php">T</a></li>
-            <li><a href="kolmapaev.php">K</a></li>
-            <li><a href="neljapaev.php">N</a></li>
-            <li><a href="reede.php">R</a></li>
-            <li><a href="varske_teade.php">Värske teade</a></li>
+            <li><a href="esimene.php">Esimene anekdoot</a></li>
+            <li><a href="teine.php">Teine anekdoot</a></li>
+            <li><a href="kolmas.php">Kolmas anekdoot</a></li>
         </ul>
     </div>
 </div>
