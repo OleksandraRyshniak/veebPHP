@@ -12,7 +12,7 @@
             </ul>
         </li>
         <li><a href="?link=too_pildifailidega.php">Töö pildifailidega</a></li>
-        <li><a href="?link=konspekt_mob.php">Mobillimalli</a>
+        <li><a href="?link=mobillimalliKonspekt.php">Mobillimall</a>
             <ul class = "dropdown">
                 <li><a href="content/mobiilimall/Anekdoot/esimene.php">Anekdoot</a></li>
                 <li><a href="content/mobiilimall/esmaspaev.php">Tunniplaan</a></li>

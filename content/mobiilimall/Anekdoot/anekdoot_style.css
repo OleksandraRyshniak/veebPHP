@@ -56,11 +56,10 @@ p {
     max-width: 600px;
     margin: 0 auto 30px auto;
 }
-.nav2  {
-    text-align: right;
+footer  {
+    text-align: center;
     font-size: 14px;
-
-    color: #777;
+    color: black;
     padding: 15px;
     border-top: 1px solid #ddd;
     width: 100%;

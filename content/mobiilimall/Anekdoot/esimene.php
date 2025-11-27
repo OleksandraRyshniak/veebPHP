@@ -1,5 +1,5 @@
 <?php require("menu.php"); ?>
-<h2>Esimene anekdoot</h2>
+<h2>Hilinemise põhjus</h2>
 <p>
     <?php
     require("anekdoot1.txt");

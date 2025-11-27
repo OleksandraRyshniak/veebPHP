@@ -1,5 +1,5 @@
 <?php require("menu.php"); ?>
-<h2>Kolmas anekdoot</h2>
+<h2>Miks hiir ei püüa?</h2>
 
 <p>
     <?php
